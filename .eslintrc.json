@@ -1,14 +1,7 @@
 {
   "root": true,
   "env": { "browser": true, "es2020": true },
-  "extends": [
-    "next/core-web-vitals",
-    "eslint:recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
+  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:react-hooks/recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   "ignorePatterns": ["dist", ".eslintrc.cjs"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -19,7 +12,13 @@
   "plugins": ["react-refresh", "react", "prettier"],
   "rules": {
     // "prettier/prettier": "error",
-
+    "newline-before-return": "error", // add new line above return
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ], // add new line below import
     "max-statements-per-line": ["warn", { "max": 1 }],
     "no-nested-ternary": "warn",
     "no-unneeded-ternary": "warn",

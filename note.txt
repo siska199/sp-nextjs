@@ -1,0 +1,2 @@
+>>>Setup husky:
+Reference : https://medium.com/@anoopnayak1/implement-git-hooks-using-husky-with-commitlint-in-nextjs-7ebd45d83be9

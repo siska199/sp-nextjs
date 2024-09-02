@@ -1,10 +1,4 @@
-
-const Home = () => {
-  
-  return (
-    <article>
-      
-    </article>
-  );
+const HomePage = () => {
+  return <article>SISKA APRIANA RIFIANTI</article>;
 };
-export default Home;
+export default HomePage;

@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*-Font Config-*/
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    local('Mona Sans Light'),
+    url('../_assets/fonts/MonaSans-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    local('Mona Sans Black'),
+    url('../_assets/fonts/MonaSans-Black.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    local('Mona Sans Medium'),
+    url('../_assets/fonts/MonaSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    local('Mona Sans SemiBold'),
+    url('../_assets/fonts/MonaSans-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    local('Mona Sans Bold'),
+    url('../_assets/fonts/MonaSans-Bold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@layer utilities {
+  *,
+  *::before,
+  *::after {
+    @apply box-border p-0 m-0;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  html,
+  body {
+    @apply w-full h-full font-monaSans text-body-base;
+  }
+  h1 {
+    @apply text-heading-01;
+  }
+  h2 {
+    @apply text-heading-02;
+  }
+  h3 {
+    @apply text-heading-03;
+  }
+  h4 {
+    @apply text-heading-04;
+  }
+  h5 {
+    @apply text-heading-05;
+  }
+  p {
+    @apply text-body-base text-gray text-justify;
+  }
+}
+
+@layer utilities {
+  /*--Bounce Effect */
+  .bounce-effect {
+    @apply transition-all duration-[50] hover:scale-[1.03] active:scale-[0.98] disabled:!scale-[1] disabled:cursor-not-allowed;
+  }
+
+  .bounce-effect-disabled {
+    @apply transition-none hover:scale-100 active:scale-100;
+  }
+
+  .cursor-pointer-custome {
+    @apply bounce-effect cursor-pointer;
+  }
+}
